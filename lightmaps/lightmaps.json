@@ -1,9 +1,6 @@
 {
  "ARCH": {
-  "file": "lightmaps/lm_arch.webp",
-  "scale": 1.0220623002777098,
   "uv": "TEXCOORD_1",
-  "encoding": "sRGB of (irradiance_over_pi * whitebalance / scale); lightMapIntensity = scale * PI",
   "objects": [
    "WEB_ARCH_Floor",
    "WEB_ARCH_Roof_Slab",
@@ -44,13 +41,28 @@
    "WEB_DL_P_Reflector",
    "WEB_WIN_W1_Frame",
    "WEB_CURT_Track"
-  ]
+  ],
+  "layers": {
+   "COVE": {
+    "file": "lightmaps/lm_arch_cove.webp",
+    "scale": 16.624162673950195,
+    "gamma": 3.0
+   },
+   "DOWN": {
+    "file": "lightmaps/lm_arch_down.webp",
+    "scale": 0.19400444626808167,
+    "gamma": 3.0
+   },
+   "JH": {
+    "file": "lightmaps/lm_arch_jh.webp",
+    "scale": 0.04118375852704048,
+    "gamma": 3.0
+   }
+  },
+  "encoding": "texel = (irradiance/pi * wb / scale)^(1/gamma); weight = scale * PI * switch"
  },
  "FURN": {
-  "file": "lightmaps/lm_furn.webp",
-  "scale": 0.20796655280685425,
   "uv": "TEXCOORD_1",
-  "encoding": "sRGB of (irradiance_over_pi * whitebalance / scale); lightMapIntensity = scale * PI",
   "objects": [
    "WEB_DOOR_D1_Frame",
    "WEB_DOOR_D1_Leaf",
@@ -107,9 +119,36 @@
    "WEB_PLANT_Left_Planter",
    "WEB_PLANT_Right_Planter",
    "WEB_PLANT_SideTable_Planter",
-   "WEB_PLANT_CoffeeTable_Planter",
    "WEB_PLANT_Console_Planter",
+   "WEB_SWITCH_Board_Plate",
+   "WEB_SW_COVE",
+   "WEB_SW_DOWN",
+   "WEB_SW_JHOOMER",
+   "WEB_SW_FAN1",
+   "WEB_SW_FAN2",
+   "WEB_REMOTE_AC",
    "WEB_AC_Split_Indoor"
-  ]
+  ],
+  "layers": {
+   "COVE": {
+    "file": "lightmaps/lm_furn_cove.webp",
+    "scale": 0.2481755167245865,
+    "gamma": 3.0
+   },
+   "DOWN": {
+    "file": "lightmaps/lm_furn_down.webp",
+    "scale": 0.21576090157032013,
+    "gamma": 3.0
+   },
+   "JH": {
+    "file": "lightmaps/lm_furn_jh.webp",
+    "scale": 0.05404472351074219,
+    "gamma": 3.0
+   }
+  },
+  "encoding": "texel = (irradiance/pi * wb / scale)^(1/gamma); weight = scale * PI * switch"
+ },
+ "_meta": {
+  "version": 1790235407
  }
 }
