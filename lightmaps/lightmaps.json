@@ -45,19 +45,19 @@
   "layers": {
    "COVE": {
     "file": "lightmaps/lm_arch_cove.webp",
-    "scale": 16.624162673950195,
+    "scale": 14.63404655456543,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_arch_cove_2k.webp"
    },
    "DOWN": {
     "file": "lightmaps/lm_arch_down.webp",
-    "scale": 0.19400444626808167,
+    "scale": 0.19283030927181244,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_arch_down_2k.webp"
    },
    "JH": {
     "file": "lightmaps/lm_arch_jh.webp",
-    "scale": 0.04118375852704048,
+    "scale": 0.04234558716416359,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_arch_jh_2k.webp"
    }
@@ -135,19 +135,19 @@
   "layers": {
    "COVE": {
     "file": "lightmaps/lm_furn_cove.webp",
-    "scale": 0.2481755167245865,
+    "scale": 0.22664707899093628,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_furn_cove_2k.webp"
    },
    "DOWN": {
     "file": "lightmaps/lm_furn_down.webp",
-    "scale": 0.21576090157032013,
+    "scale": 0.19839774072170258,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_furn_down_2k.webp"
    },
    "JH": {
     "file": "lightmaps/lm_furn_jh.webp",
-    "scale": 0.05404472351074219,
+    "scale": 0.05262475460767746,
     "gamma": 3.0,
     "file_2k": "lightmaps/lm_furn_jh_2k.webp"
    }
@@ -155,6 +155,6 @@
   "encoding": "texel = (irradiance/pi * wb / scale)^(1/gamma); weight = scale * PI * switch"
  },
  "_meta": {
-  "version": 1790237800
+  "version": 1790240627
  }
 }
