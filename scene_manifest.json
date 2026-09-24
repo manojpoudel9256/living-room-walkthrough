@@ -1,0 +1,150 @@
+{
+ "file": "living_room_web.glb",
+ "generated_from": "living_room_nepal_master.blend (scene 'WebExport_Scene')",
+ "units": "meters",
+ "coordinate_convention": {
+  "blender": "Z up; origin = main-room near-left inner corner at finished floor; +X toward TV wall; +Y toward far door/window",
+  "gltf_three_js": "glTF is Y up (exporter converted): three.x = blender.x, three.y = blender.z, three.z = -blender.y",
+  "check": "room clear width 3.6576 m (X) and length 4.8768 m (-Z in three.js) verified after reimport"
+ },
+ "spawn": {
+  "name": "SPAWN_Corridor",
+  "blender_xyz": [
+   0.762,
+   -1.6,
+   0.0
+  ],
+  "three_xyz": [
+   0.762,
+   0.0,
+   1.6
+  ],
+  "eye_height_m": 1.6,
+  "look_toward_blender": [
+   0.762,
+   4.0,
+   1.5
+  ]
+ },
+ "walkable_floor": "NAV_Walk_Floor (main room + passage polygon); do not allow walking outside it",
+ "colliders": [
+  "COL_CoffeeTable",
+  "COL_Console",
+  "COL_Curtains",
+  "COL_Door_D1_Blocker",
+  "COL_Door_D2_Blocker",
+  "COL_Door_D3_Blocker",
+  "COL_Floor",
+  "COL_Plant_Left",
+  "COL_Plant_Right",
+  "COL_SideTable",
+  "COL_Sofa",
+  "COL_Wall_Far_A",
+  "COL_Wall_Far_B",
+  "COL_Wall_Left_A",
+  "COL_Wall_Left_B",
+  "COL_Wall_Near",
+  "COL_Wall_PassageEnd",
+  "COL_Wall_PassageRight_A",
+  "COL_Wall_PassageRight_B",
+  "COL_Wall_Right_TV"
+ ],
+ "collider_notes": "COL_* boxes carry extras.collider = static | door_closed | door_blocked_unmodelled_room. Hide them in the viewer. Door blockers stay until an open interaction exists; D2 stays blocked because the adjacent room is not modelled. No crystal-level colliders for the jhoomer.",
+ "doors": {
+  "D1": {
+   "pivot": "WEB_DOOR_D1_Hinge",
+   "rotate_axis": "vertical (three.js Y)",
+   "swing": "out of main room toward +Y; hinge at smaller X",
+   "master_open_angle_deg": 0
+  },
+  "D2": {
+   "pivot": "WEB_DOOR_D2_Hinge",
+   "rotate_axis": "vertical (three.js Y)",
+   "swing": "out of main room toward -X; hinge at smaller Y",
+   "master_open_angle_deg": 100
+  },
+  "D3": {
+   "pivot": "WEB_DOOR_D3_Hinge",
+   "rotate_axis": "vertical (three.js Y)",
+   "swing": "out of passage toward +X; hinge at larger Y",
+   "master_open_angle_deg": 0
+  }
+ },
+ "fans": {
+  "F1": {
+   "rotor_pivot": "WEB_FAN_F1_RotorPivot",
+   "rotate_axis": "vertical (three.js Y)",
+   "sweep_diameter_m": 1.2192,
+   "blade_plane_height_m": 2.72
+  },
+  "F2": {
+   "rotor_pivot": "WEB_FAN_F2_RotorPivot",
+   "rotate_axis": "vertical (three.js Y)",
+   "sweep_diameter_m": 1.2192,
+   "blade_plane_height_m": 2.72
+  }
+ },
+ "jhoomer": {
+  "root": "WEB_JH_J1_Root",
+  "crystals": "WEB_JH_Crystals_Simplified (transmission material)",
+  "note": "simplified for web; master has 370 chamfered prisms"
+ },
+ "lights": {
+  "exported_punctual": [
+   "WEB_LG_Downlight_1",
+   "WEB_LG_Downlight_2",
+   "WEB_LG_Downlight_3",
+   "WEB_LG_Downlight_4",
+   "WEB_LG_Downlight_5",
+   "WEB_LG_Downlight_6",
+   "WEB_LG_Downlight_7",
+   "WEB_LG_Downlight_8",
+   "WEB_LG_Downlight_Passage",
+   "WEB_LG_Jhoomer_Lamp_2"
+  ],
+  "cove_hints": [
+   "HINT_LG_Cove_Area_S",
+   "HINT_LG_Cove_Area_N",
+   "HINT_LG_Cove_Area_W",
+   "HINT_LG_Cove_Area_E",
+   "HINT_LG_Cove_Corner_1",
+   "HINT_LG_Cove_Corner_2",
+   "HINT_LG_Cove_Corner_3",
+   "HINT_LG_Cove_Corner_4"
+  ],
+  "notes": "glTF carries spot/point lights only. Blender area lights (cove) and world lighting do not export: recreate the cove with RectAreaLights at the HINT_ empties (facing up into the recess) or bake a lightmap; the LED strip is exported as an emissive ring (MW_LED_Cove). Light intensities are converted by the exporter and need re-balancing with tone mapping in three.js."
+ },
+ "materials": {
+  "image_pbr": [
+   "MW_Plaster_Wall",
+   "MW_Walnut",
+   "MW_Fabric_Sofa",
+   "MW_Fabric_Cream",
+   "MW_Fabric_Olive",
+   "MW_Curtain",
+   "MW_Rug",
+   "MW_Floor_Tile"
+  ],
+  "texture_transform": "UVs are in meters; tiling comes from KHR_texture_transform scale (1 / real texture size)",
+  "baked": "tinted colours and remapped roughness baked with scripts/w00_bake_web_textures.py; procedural 2 ft tile re-made as an image",
+  "glass": "MW_Crystal uses KHR_materials_transmission; window/picture glass alpha-blended",
+  "not_identical": "the GLB will not look identical to the Cycles renders (no path tracing, no area lights, simplified crystals)"
+ },
+ "reimport_test": {
+  "glb_bytes": 27660172,
+  "glb_MB": 27.66,
+  "meshes": 174,
+  "triangles": 276654,
+  "lights": 10,
+  "empties": 22,
+  "room_width_after_reimport": 3.6576,
+  "room_length_after_reimport": 4.8768,
+  "has_door_pivots": true,
+  "has_fan_pivots": true,
+  "has_spawn": true,
+  "colliders": 20,
+  "missing_images": []
+ },
+ "browser_test": "NOT performed in this task - browser performance untested",
+ "measurement_status": "confirmed: 12x16 ft room, 10 ft structural height; all other geometry proposed estimates"
+}
