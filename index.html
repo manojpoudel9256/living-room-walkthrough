@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Living Room Walkthrough</title>
+    <script type="module" crossorigin src="./assets/index-CYRHmi3W.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DrW3iqpx.css">
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <div id="loader">
+      <div class="loader-card">
+        <p class="eyebrow">Nepal living room</p>
+        <h1>Loading the room</h1>
+        <div class="bar"><span id="bar-fill"></span></div>
+        <p id="loader-text">0%</p>
+      </div>
+    </div>
+
+    <div id="start" hidden>
+      <div class="start-card">
+        <p class="eyebrow">12 × 16 ft · walkthrough prototype</p>
+        <h1>Nepal living room</h1>
+        <p class="lede">Walk in from the entrance passage and look around.</p>
+        <ul class="keys desktop-only">
+          <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</li>
+          <li><kbd>Mouse</kbd> look</li>
+          <li><kbd>Shift</kbd> walk faster</li>
+          <li><kbd>E</kbd> open / close nearest door</li>
+          <li><kbd>F</kbd> fans on / off</li>
+          <li><kbd>Esc</kbd> pause</li>
+        </ul>
+        <ul class="keys touch-only">
+          <li>Left thumb: move</li>
+          <li>Right side: drag to look</li>
+          <li>Buttons: door · fans</li>
+        </ul>
+        <button id="enter">Enter the room</button>
+        <p class="fine">Provisional design: only the 12 × 16 ft room and the 10 ft ceiling are confirmed measurements.</p>
+        <p class="fine credits">Credits: "Air conditioner" by Poly by Google (<a href="https://poly.pizza/m/5KohLH0xc8d" target="_blank" rel="noopener">poly.pizza</a>, CC-BY 3.0, modified). Plants and textures from <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a> (CC0). Everything else modelled for this project.</p>
+      </div>
+    </div>
+
+    <div id="hud" hidden>
+      <div id="crosshair"></div>
+      <div id="hint"></div>
+      <div id="touch-ui">
+        <div id="joystick"><div id="stick"></div></div>
+        <div id="touch-buttons">
+          <button id="btn-door">Door</button>
+          <button id="btn-fan">Fans</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
