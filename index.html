@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Living Room Walkthrough</title>
-    <script type="module" crossorigin src="./assets/index-CoeyXf34.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Brm04DLF.css">
+    <script type="module" crossorigin src="./assets/index-ISU78OIp.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-lFdqaPus.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -35,9 +35,11 @@
         <ul class="keys touch-only">
           <li>Left thumb: move</li>
           <li>Right side: drag to look</li>
-          <li>Tap switches, the AC remote or doors; top-right panel toggles everything</li>
+          <li>Tap switches, the AC remote or doors; the top row toggles lights, fans and AC</li>
+          <li>Landscape button: full-screen sideways view</li>
         </ul>
         <button id="enter">Enter the room</button>
+        <button id="enter-landscape" class="touch-only">Enter in landscape (full screen)</button>
         <p class="fine">Provisional design: only the 12 × 16 ft room and the 10 ft ceiling are confirmed measurements.</p>
         <p class="fine credits">Credits: "Air conditioner" by Poly by Google (<a href="https://poly.pizza/m/5KohLH0xc8d" target="_blank" rel="noopener">poly.pizza</a>, CC-BY 3.0, modified). Plants and textures from <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a> (CC0). Everything else modelled for this project.</p>
       </div>
@@ -49,9 +51,19 @@
       <div id="touch-ui">
         <div id="joystick"><div id="stick"></div></div>
         <div id="touch-buttons">
+          <button id="btn-orient">Landscape</button>
           <button id="btn-door">Door</button>
           <button id="btn-fan">Fans</button>
         </div>
+      </div>
+    </div>
+
+    <div id="rotate-hint" hidden>
+      <div class="rotate-card">
+        <div class="phone-icon" aria-hidden="true"></div>
+        <p>Turn your phone sideways for landscape view</p>
+        <p class="fine">If it doesn't turn, switch off rotation lock in your phone's quick settings.</p>
+        <button id="rotate-cancel">Stay in portrait</button>
       </div>
     </div>
 
