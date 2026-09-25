@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Living Room Walkthrough</title>
-    <script type="module" crossorigin src="./assets/index-6xALy-ve.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BVpwOSpp.css">
+    <title>Living Room Walkthrough</title>
+    <script type="module" crossorigin src="./assets/index-CGYlrsWE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C2ZLl9BD.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -40,6 +40,7 @@
         </ul>
         <button id="enter">Enter the room</button>
         <button id="enter-landscape" class="touch-only">Enter in landscape (full screen)</button>
+        <button id="watch-video" class="watch-btn"><span aria-hidden="true">&#9654;</span> Watch the cinematic video (1080p)</button>
         <p class="fine">Provisional design: only the 12 × 16 ft room and the 10 ft ceiling are confirmed measurements.</p>
         <p class="fine credits">Credits: "Air conditioner" by Poly by Google (<a href="https://poly.pizza/m/5KohLH0xc8d" target="_blank" rel="noopener">poly.pizza</a>, CC-BY 3.0, modified). Plants and textures from <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a> (CC0). Everything else modelled for this project.</p>
       </div>
@@ -58,6 +59,16 @@
       </div>
     </div>
 
+    <div id="video-modal" hidden role="dialog" aria-modal="true" aria-label="Cinematic walkthrough video">
+      <div class="video-frame">
+        <video id="film" controls playsinline preload="none" poster="./video/poster.jpg">
+          <source src="./video/living_room_1080p.mp4" type="video/mp4" />
+        </video>
+        <p class="video-caption">Rendered in Blender Cycles · 1920 × 1080 · 16 s · with the owner's artwork</p>
+        <button id="video-close" aria-label="Close video">&times;</button>
+      </div>
+    </div>
+
     <div id="rotate-hint" hidden>
       <div class="rotate-card">
         <div class="phone-icon" aria-hidden="true"></div>
@@ -66,6 +77,6 @@
         <button id="rotate-cancel">Stay in portrait</button>
       </div>
     </div>
-
+
   </body>
 </html>
