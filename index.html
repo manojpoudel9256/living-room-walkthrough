@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Living Room Walkthrough</title>
-    <script type="module" crossorigin src="./assets/index-ISU78OIp.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-lFdqaPus.css">
+    <title>Living Room Walkthrough</title>
+    <script type="module" crossorigin src="./assets/index-BpWy0d6n.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BVpwOSpp.css">
   </head>
   <body>
     <canvas id="scene"></canvas>
@@ -35,8 +35,8 @@
         <ul class="keys touch-only">
           <li>Left thumb: move</li>
           <li>Right side: drag to look</li>
-          <li>Tap switches, the AC remote or doors; the top row toggles lights, fans and AC</li>
-          <li>Landscape button: full-screen sideways view</li>
+          <li>Tap switches, the AC remote or doors</li>
+          <li>Bulb (top right): lights, fans, AC · right edge: landscape, door, fans</li>
         </ul>
         <button id="enter">Enter the room</button>
         <button id="enter-landscape" class="touch-only">Enter in landscape (full screen)</button>
@@ -51,9 +51,9 @@
       <div id="touch-ui">
         <div id="joystick"><div id="stick"></div></div>
         <div id="touch-buttons">
-          <button id="btn-orient">Landscape</button>
-          <button id="btn-door">Door</button>
-          <button id="btn-fan">Fans</button>
+          <button id="btn-orient" class="icon-btn" aria-label="Landscape view" title="Landscape view"><svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="2"/><path d="M18.5 12h.01"/></svg></button>
+          <button id="btn-door" class="icon-btn" aria-label="Open or close the nearest door" title="Door"><svg viewBox="0 0 24 24"><path d="M6 21V4h11v17M4 21h16"/><path d="M14 12.5h.01"/></svg></button>
+          <button id="btn-fan" class="icon-btn" aria-label="Both fans on or off" title="Fans"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4C12 6 13.5 3.5 16 4.2c2 .6 1.2 3.6-4 6.2M13.6 12.8c3.8 2.2 5.2 4.8 3.4 6.6-1.5 1.5-3.7-.7-3.4-6.6M10.5 12.6c-3.8 2.2-6.8 2.2-7.4-.3-.5-2 2.5-2.8 7.4.3"/></svg></button>
         </div>
       </div>
     </div>
@@ -66,6 +66,6 @@
         <button id="rotate-cancel">Stay in portrait</button>
       </div>
     </div>
-
+
   </body>
 </html>
